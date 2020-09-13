@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+<head>
+    <title>Django site</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h3><a href="{% url 'lastPosts' %}">Post del'ultima ora</a></h3>
+    <div class='box-post'>
+    <h2>PUBBLICA UN POST</h2>
+    <form method="POST" class='post-form'>
+    {% csrf_token %}
+    <label for="Messaggio">Messaggio:</label><br>
+    <input type="text" id="msg" name="msg"><br>
+    <br>
+    <input type="submit" value="Invia" />
+    </form>
+    </div>
+
+    <div class='post-list'>
+        {% for pos in post %}
+        <table>
+        <tr>
+            <th>{{ pos.author }}</th>
+            <th>{{ pos.published_date }}</th>
+        </tr>
+        <tr>
+            <td>{{ pos.content }}</td>
+        </tr>
+        </table>
+        {% endfor %}
+    </div>
+
+    
+</body>
+</html>

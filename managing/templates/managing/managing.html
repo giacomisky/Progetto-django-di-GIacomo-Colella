@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/managing.css' %}">
+</head>
+<body>
+    <h1>Numero post di ogni utente</h1>
+    <div>
+        {% for name, num in elePost.items %}
+        <table class='num-post'>
+        <tr>
+            <td>{{ name }}: </td>
+            <td>{{ num }}</td><br>
+        </tr>
+        </table>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

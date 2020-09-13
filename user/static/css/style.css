@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+}
+
+.post-form{
+    color: green;
+}
+
+.box-post{
+    width: 400px;
+    height: 140px;
+    margin-top: 100px;
+    margin-left: 200px;
+    position: fixed;
+}
+
+h3{
+    color: green;
+    text-align: left;
+    margin-left: 40px;
+}
+
+h2{
+    color: red;
+}
+
+p{
+    color: white;
+}
+
+table {
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: green;
+  }
+
+th, td{
+    padding: 5px;
+}
+
+th{
+    color: red;
+}
+
+td{
+    color: green;
+}
+
+table{
+    margin-bottom: 40px;
+}
+
+.post-list{
+    margin-top: 100px;
+    margin-left: 650px;
+}

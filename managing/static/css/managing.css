@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    margin-bottom: 50px;
+}
+
+.num-post{
+    margin: 0 auto;
+    font-family: monospace;
+    font-size: 24px;
+}
+
+td{
+    padding: 5px;
+}
